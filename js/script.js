@@ -3,8 +3,11 @@ const checkbox = document.querySelector('.checkbox__keys');
 const switcher = document.querySelector('.switcher');
 const keysSection = document.querySelector('.piano__keys');
 
+const volumeControl = document.querySelector('#volume');
+
 const playNote = (note) => {
     const audio = new Audio(`./notes/${note}.wav`);
+    audio.volume = volumeControl.value;
     audio.play();
 }
 
